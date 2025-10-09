@@ -3,66 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="extra.html" />
+    <title>MERN Landing Page</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #f7cac9, #92a8d1);
-            color: #333;
-            text-align: center;
             margin: 0;
-            padding: 0;
-        }
-
-        h1 {
-            background-color: #333;
-            color: white;
             padding: 20px;
-            margin: 0;
         }
 
-        h2 {
-            color: #2e4a7d;
-        }
-
-        p {
-            font-size: 18px;
+        h1, h2 {
+            text-align: center;
         }
 
         ul {
-            list-style: none;
+            max-width: 400px;
+            margin: 0 auto 20px auto;
             padding: 0;
         }
 
         li {
-            background-color: white;
-            margin: 5px auto;
-            padding: 10px;
-            width: 250px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            margin: 5px 0;
+        }
+
+        .video-button {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0;
+        }
+
+        .video-button button {
+            padding: 12px 25px;
+            font-size: 16px;
+            cursor: pointer;
         }
 
         a {
-            color: #2e4a7d;
+            display: block;
+            text-align: center;
+            margin: 5px 0;
             text-decoration: none;
-            font-weight: bold;
-        }
-
-        a:hover {
-            color: #ff6f61;
-        }
-
-        hr {
-            width: 80%;
-            border: 1px solid #ccc;
-            margin: 20px auto;
+            color: blue;
         }
     </style>
 </head>
 <body>
-    <h1>welcome to mern</h1>
+    <h1>Welcome to MERN</h1>
     <p>The MERN stack is a popular web development framework that combines MongoDB, Express.js, React, and Node.js.</p>
     <p>It allows developers to build full-stack JavaScript applications efficiently — from front end to back end — using a single language.</p>
 
@@ -78,8 +64,10 @@
     <hr>
 
     <h2>Contact</h2>
-    <a href="extra.html">next page</a><br>
-    <a href="list.html">list page</a><br>
+    <a href="extra.html">next page</a>
+    <a href="list.html">list page</a>
     <a href="table.html">table page</a>
+
+    
 </body>
 </html>

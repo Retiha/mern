@@ -3,92 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Watch Video</title>
     <style>
         body {
-            font-family: 'Verdana', sans-serif;
-            background: linear-gradient(to right, #a8edea, #fed6e3);
-            margin: 0;
-            padding: 0;
-            color: #333;
+            font-family: Arial, sans-serif;
             text-align: center;
+            padding: 50px 20px;
         }
-
         h1 {
-            background-color: #ff6f61;
-            color: white;
-            padding: 20px;
-            margin: 0;
+            margin-bottom: 30px;
         }
-
-        h2 {
-            color: #2e3a59;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.5;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            background-color: white;
-            margin: 10px auto;
-            padding: 10px;
-            width: 300px;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            font-weight: bold;
-        }
-
-        hr {
+        iframe {
             width: 80%;
-            margin: 25px auto;
-            border: 1px solid #ddd;
-        }
-
-        footer {
-            background-color: #ff6f61;
-            color: white;
-            padding: 15px 0;
-            margin-top: 30px;
-        }
-
-        a {
-            color: #2e3a59;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        a:hover {
-            color: #ff6f61;
+            max-width: 700px;
+            height: 400px;
+            border: none;
         }
     </style>
 </head>
 <body>
-    <h1>My Favorite Hobbies</h1>
+    <h1>Watch This YouTube Video</h1>
 
-    <p>Everyone has something they love to do in their free time. Here are some of my favorite hobbies!</p>
-
-    <hr>
-
-    <h2>Top 3 Hobbies</h2>
-    <ul>
-        <li>🎨 Drawing and Sketching</li>
-        <li>🎧 Listening to Music</li>
-        <li>💻 Coding and Web Designing</li>
-    </ul>
-
-    <hr>
-
-    <h2>Why I Love Them</h2>
-    <footer>
-        <p>Made with ❤️ by Retiha</p>
-        <p>Follow me on <a href="#">Instagram</a> | <a href="#">GitHub</a></p>
-    </footer>
+    <iframe 
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+        title="YouTube video player" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
 </body>
 </html>
