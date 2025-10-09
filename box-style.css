@@ -1,0 +1,58 @@
+/* ---------- box-style.css ---------- */
+
+/* Container for the whole page */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 2px solid #333;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Paragraphs (content boxes) */
+.content-box {
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    background-color: #fff8dc;
+}
+
+/* About Me List */
+.info-box {
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    background-color: #e0f7fa;
+}
+
+/* Links Box */
+.links-box a {
+    display: block;
+    margin: 5px 0;
+    padding: 8px;
+    text-decoration: none;
+    color: white;
+    background-color: #2196f3;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Video Button */
+.video-button {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+.video-button button {
+    padding: 15px 30px;
+    border: 2px solid #2196f3;
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.video-button button:hover {
+    background-color: #45a049;
+}
