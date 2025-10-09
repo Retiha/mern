@@ -5,28 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MERN Landing Page</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="box-style.css">
-    
 </head>
 <body>
+
+    <!-- Top Buttons -->
+    <div class="button-container">
+        <a href="box.html" class="btn">Box Model</a>
+        <a href="list.html" class="btn">List Page</a>
+        <a href="table.html" class="btn">Table Page</a>
+    </div>
+
+    <!-- Heading Section -->
     <h1>Welcome to MERN</h1>
-    <p>The MERN stack is a popular web development framework that combines MongoDB, Express.js, React, and Node.js.</p>
+    <p class="intro">
+        The MERN stack is a popular web development framework that combines 
+        MongoDB, Express.js, React, and Node.js for building powerful full-stack applications.
+    </p>
+
     <hr>
 
+    <!-- About Section -->
     <h2>About Me</h2>
-    <ul>
-        <center><li>Name: Retiha</li></center>
-        <center><li>Course: Computer Engineering</li></center>
-        <center><li>Interest: Web Development</li></center>
-    </ul>
+    <div class="about-cards">
+        <div class="card">
+            <h3>Name</h3>
+            <p>Retiha</p>
+        </div>
+        <div class="card">
+            <h3>Course</h3>
+            <p>Computer Engineering</p>
+        </div>
+        <div class="card">
+            <h3>Goal</h3>
+            <p>To become a skilled front-end developer and build interactive websites.</p>
+        </div>
+    </div>
 
     <hr>
 
-    <h2>Contact</h2>
-    <a href="extra.html">next page</a><br>
-    <a href="list.html">list page</a><br>
-    <a href="table.html">table page</a>
+    <!-- Footer Contact Section -->
+    <footer>
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:retiha@example.com">retiha@example.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/" target="_blank">linkedin.com/in/retiha</a></p>
+        <p>GitHub: <a href="https://github.com/" target="_blank">github.com/retiha</a></p>
+    </footer>
 
-    
 </body>
 </html>

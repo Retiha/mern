@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Page</title>
+    <link rel="stylesheet" href="box-style.css">
+    <style>
+        /* Flex container for horizontal boxes */
+        .boxes-row {
+            display: flex;
+            justify-content: center; /* default center */
+            gap: 20px;               /* space between boxes */
+            margin-top: 50px;        /* vertical spacing from top */
+        }
+
+        /* Small black boxes */
+        .black-box {
+            width: 150px;   /* smaller width */
+            height: 100px;  /* smaller height */
+            background-color: pink;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    
+        <h1 style="text-align: center;">Horizontal Boxes</h1>
+
+        <!-- Horizontal boxes row -->
+        <div class="boxes-row">
+            <div class="black-box"></div>
+            <div class="black-box"></div>
+            <div class="black-box"></div>
+            <div class="black-box"></div>
+        </div>
+
+        <!-- Back link -->
+        <div class="links-box" style="margin-top: 30px;">
+            <a href="index.html">Back to Home</a>
+        </div>
+    
+
+</body>
+</html>
