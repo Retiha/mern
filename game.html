@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+
+    <style>
+        /* 🎨 Overall page styling */
+        body {
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 🧩 Title */
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        /* 🎮 Buttons layout */
+        .choices {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        /* ✨ Button styling */
+        button {
+            background-color: #fff;
+            color: #0072ff;
+            border: none;
+            border-radius: 10px;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+        }
+
+        /* 💥 Button hover effect */
+        button:hover {
+            background-color: #0072ff;
+            color: #fff;
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 🧾 Result box */
+        #result {
+            font-size: 1.5em;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <div class="choices">
+        <button onclick="play('rock')">🪨 Rock</button>
+        <button onclick="play('paper')">📃 Paper</button>
+        <button onclick="play('scissors')">✂️ Scissors</button> 
+    </div>
+    <div id="result">Make your move!</div>
+
+    <script>
+        function play(player) {
+            const choices = ['rock', 'paper', 'scissors'];
+            let computer = choices[Math.floor(Math.random() * choices.length)];
+            let result = '';
+
+            if (player === computer) {
+                result = `🤝 It's a Draw! You both chose ${player}.`;
+            } 
+            else if (
+                (player === 'rock' && computer === 'scissors') ||
+                (player === 'paper' && computer === 'rock') ||
+                (player === 'scissors' && computer === 'paper')
+            ) {
+                result = `🎉 You Win! Computer chose ${computer}.`;
+            } 
+            else {
+                result = `💔 You Lose! Computer chose ${computer}.`;
+            }
+
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+</html>
