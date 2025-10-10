@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Narrow Sidebar Layout</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #ecfdf5;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr;
+    grid-template-rows: 60px 150px 150px 60px;
+    gap: 10px;
+    width: 90%;
+    max-width: 700px; 
+  }
+
+  .box {
+    background: #22c55e;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: none;
+  }
+
+  .header {
+    grid-column: span 3;
+  }
+
+  .sidebar {
+    grid-row: span 2;
+  }
+
+  .bigbox {
+    grid-column: span 2;
+  }
+
+  .footer {
+    grid-column: span 3;
+  }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="box header">Header</div>
+
+    <div class="box sidebar">Sidebar</div>
+    <div class="box bigbox">Content 1</div>
+
+    <div class="box">Content 2</div>
+    <div class="box">Content 3</div>
+
+    <div class="box footer">Footer</div>
+  </div>
+</body>
+</html>

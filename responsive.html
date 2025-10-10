@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Layout with Dynamic Colors</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* prevent scrollbars */
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .grid {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 15% 42.5% 42.5%;
+    grid-template-rows: 10% 40% 40% 10%;
+    gap: 1%;
+  }
+
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1%;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-size: 2vmin;
+    transition: background 0.5s ease; /* smooth color transition */
+  }
+
+  /* Default desktop colors */
+  .header { background: #22c55e; grid-column: span 3; }
+  .footer { background: #16a34a; grid-column: span 3; }
+  .sidebar { background: #15803d; grid-row: span 2; }
+  .bigbox { background: #22c55e; grid-column: span 2; }
+  .box:nth-child(5) { background: #16a34a; }
+  .box:nth-child(6) { background: #15803d; }
+
+  /* Tablet view */
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: 25% 75%;
+      grid-template-rows: 12% 38% 38% 12%;
+    }
+    .bigbox { grid-column: span 1; }
+
+    /* Change colors for tablet */
+    .header { background: #4ade80; }
+    .footer { background: #22c55e; }
+    .sidebar { background: #16a34a; }
+    .bigbox { background: #4ade80; }
+    .box:nth-child(5) { background: #22c55e; }
+    .box:nth-child(6) { background: #16a34a; }
+  }
+
+  /* Mobile view */
+  @media (max-width: 600px) {
+    .grid {
+      grid-template-columns: 100%;
+      grid-template-rows: 10% 20% 20% 20% 20% 10%;
+    }
+
+    .header, .footer, .sidebar, .bigbox, .box:nth-child(5), .box:nth-child(6) {
+      grid-column: span 1;
+      width: 100%;
+    }
+
+    /* Change colors for mobile */
+    .header { background: #facc15; }    /* yellow */
+    .footer { background: #f97316; }    /* orange */
+    .sidebar { background: #f87171; }   /* red */
+    .bigbox { background: #4ade80; }    /* green */
+    .box:nth-child(5) { background: #22c55e; }
+    .box:nth-child(6) { background: #16a34a; }
+    
+    .box { font-size: 3vmin; } /* scale font for mobile */
+  }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="box header">Header</div>
+    <div class="box sidebar">Sidebar</div>
+    <div class="box bigbox">Big Box</div>
+    <div class="box">Box 3</div>
+    <div class="box">Box 4</div>
+    <div class="box footer">Footer</div>
+  </div>
+</body>
+</html>
