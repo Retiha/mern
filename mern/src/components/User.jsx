@@ -1,8 +1,8 @@
 const User =({name, department,skills,DOB,Age})=>{
     return(
         <div>
-            <h1>I am {name} from {department}</h1>
-            <h2>DOB is {DOB} Age is {Age}</h2>
+            I am {name} from {department}<br></br>
+            DOB is {DOB} Age is {Age}
         <ol>
             {skills?.map((skill) => (
           <li key={skill}>{skill}</li>
