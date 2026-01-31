@@ -10,3 +10,4 @@ router.put('/updateTask/:id',protect,updateTask)
 router.delete('/deleteTask/:id',protect,deleteTask)
        
 module.exports = router;
+

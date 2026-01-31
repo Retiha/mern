@@ -121,9 +121,20 @@ const print=(n)=>{
 }
 //print(4);
 */
-console.log('First');
+/*console.log('First');
 Promise.resolve().then(console.log('from promises'))
 setTimeout(()=>{
     console.log('Inside timeout');
 },2000)
-console.log('last')
+console.log('last')*/
+
+const fetchApi1=async()=>{
+    try{
+        const res=await fetch('http://localhost:4000/tasks/getTask');
+        const data= await res.json();
+        {data.map((n)=>{console.log(n)})}
+    }catch(err){
+        console.log(err);
+    }
+}
+fetchApi1();
